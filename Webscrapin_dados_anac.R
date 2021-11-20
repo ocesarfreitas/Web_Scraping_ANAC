@@ -2,7 +2,6 @@
 library(tidyverse)
 library(RSelenium)
 library(rvest)
-library(netstat)
 
 # Web scrapping
 html <- rvest::read_html("https://www.anac.gov.br/acesso-a-informacao/dados-abertos/areas-de-atuacao/todos-os-dados-abertos")
@@ -33,7 +32,7 @@ dados_disp_anac <- cbind(data, indice)
 # Retirando os vetores desnecessários
 rm(list = c("data", "indice"))
 
-# Coisa do Java
+# Ambiente do Java 
 Sys.setenv(JAVA_HOME="C:/Program Files (x86)/Java/jre1.8.0_311")
 
 # Baixando as bases
